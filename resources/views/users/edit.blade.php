@@ -20,5 +20,6 @@
         </div>
 
         <button type="submit">Atualizar</button>
+        <a href="{{ route('users.index') }}">Voltar</a>
     </form>
 </x-layout>

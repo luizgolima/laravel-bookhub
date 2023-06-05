@@ -10,23 +10,32 @@
 </head>
 <body>
 <header>
-    <h1>Bookhub | Luiz Lima</h1>
-    <nav class="social-links">
+    <h1><a href="{{ route('welcome') }}" class="bookhub">Bookhub</a></h1>
+    <nav>
         <ul>
             <li>
-                <a class="linkedin"
-                   href="https://linkedin.com/in/luizgolima"
-                   target="_blank"
-                   title="LinkedIn">
+                <a href="{{ route('users.index') }}">Controle de Usuários</a>
+                <a href="{{ route('books.index') }}">Acervo de Livros</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>{{ $title }}</h2>
+
+    {{ $slot }}
+</main>
+<footer>
+    <section class="contact">
+        <h3>Mais informações</h3>
+        <ul>
+            <li>
+                <a class="linkedin" href="https://linkedin.com/in/luizgolima" target="_blank" title="LinkedIn">
                     LinkedIn
                 </a>
             </li>
             <li>
-                <a
-                    class="github"
-                    href="https://github.com/luizgolima"
-                    target="_blank"
-                    title="Github">
+                <a class="github" href="https://github.com/luizgolima" target="_blank" title="Github">
                     Github
                 </a>
             </li>
@@ -46,12 +55,10 @@
                 </a>
             </li>
         </ul>
-    </nav>
-</header>
-<main>
-    <h2>{{ $title }}</h2>
-
-    {{ $slot }}
-</main>
+    </section>
+    <section class="rights">
+        <p>© 2023 Desenvolvido por Luiz Lima.</p>
+    </section>
+</footer>
 </body>
 </html>

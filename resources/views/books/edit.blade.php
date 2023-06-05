@@ -39,5 +39,6 @@
         </div>
 
         <button type="submit">Atualizar</button>
+        <a href="{{ route('books.index') }}">Voltar</a>
     </form>
 </x-layout>
