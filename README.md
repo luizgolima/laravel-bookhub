@@ -73,35 +73,6 @@ DB_PASSWORD=senha_do_banco_de_dados
 
 7. O projeto está pronto para ser executado. Acesse-o no seu navegador em http://localhost.
 
-## Funcionalidades
-
-- CRUD de usuários da biblioteca
-    - Os usuários da biblioteca podem ser criados, lidos, atualizados e excluídos.
-
-  **Campos obrigatórios:**
-
-    - Nome: nome do usuário da biblioteca.
-    - Email: endereço de e-mail do usuário da biblioteca.
-    - Número de Cadastro: número de cadastro do usuário da biblioteca.
-
-- CRUD de livros
-    - Os livros podem ser criados, lidos, atualizados e excluídos.
-
-  **Campos obrigatórios:**
-
-    - Nome: nome do livro.
-    - Autor: autor do livro.
-    - Número de Registro: número de registro do livro.
-    - Situação: situação do livro (emprestado ou disponível).
-
-- Classificação dos livros por Gênero
-    - Os livros podem ser classificados em diferentes gêneros, como Ficção, Romance, Fantasia, Aventura, etc.
-
-- Funcionalidade de empréstimo dos livros
-    - Os livros podem ser emprestados aos usuários da biblioteca.
-    - É possível cadastrar um novo empréstimo, especificando a data de devolução.
-    - Existe a opção de marcar o empréstimo como atrasado ou devolvido.
-
 ## Licença
 
 Este projeto é licenciado sob a [MIT License](LICENSE).
