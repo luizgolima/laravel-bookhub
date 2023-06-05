@@ -77,7 +77,6 @@ nav > ul > li {
 .home {
     display: flex;
     flex-direction: column;
-    gap: 2px;
 }
 
 main {
