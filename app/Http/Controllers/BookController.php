@@ -12,7 +12,8 @@ class BookController extends Controller
      */
     public function index()
     {
-        return view('books.index');
+        $books = Book::all();
+        return view('books.index', compact('books'));
     }
 
     /**
@@ -28,15 +29,35 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'author' => 'required',
+            'registration_number' => 'required',
+            'status' => 'required|array',
+            'genre' => 'required|array',
+        ]);
+
+        $status = implode(',', $request->input('status'));
+        $genre = implode(',', $request->input('genre'));
+
+        Book::create([
+            'name' => $request->input('name'),
+            'author' => $request->input('author'),
+            'registration_number' => $request->input('registration_number'),
+            'status' => $status,
+            'genre' => $genre,
+        ]);
+
+        return redirect()->route('books.index')->with('success', 'Livro cadastrado com sucesso.');
     }
+
 
     /**
      * Display the specified resource.
      */
     public function show(Book $book)
     {
-        //
+        return view('books.show', compact('book'));
     }
 
     /**
@@ -44,7 +65,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        return view('books.edit', compact('book'));
     }
 
     /**
@@ -52,7 +73,17 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'author' => 'required',
+            'registration_number' => 'required',
+            'status' => 'required|in:Emprestado,Disponível',
+            'genre' => 'required|in:Ficção,Romance,Fantasia,Aventura,Etc',
+        ]);
+
+        $book->update($request->all());
+
+        return redirect()->route('books.index')->with('success', 'Book updated successfully.');
     }
 
     /**
@@ -60,6 +91,8 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+        $book->delete();
+
+        return redirect()->route('books.index')->with('success', 'Book deleted successfully.');
     }
 }
