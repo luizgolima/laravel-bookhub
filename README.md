@@ -48,9 +48,9 @@ cp .env.example .env
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
-DB_DATABASE=nome_do_banco_de_dados
-DB_USERNAME=usuario_do_banco_de_dados
-DB_PASSWORD=senha_do_banco_de_dados
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
 ```
 
 5. Start the Docker containers using Laravel Sail:
