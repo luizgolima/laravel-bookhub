@@ -69,7 +69,7 @@ DB_PASSWORD=your_database_password
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project was created by [Luiz Lima](https://github.com/luizgolima) and is licensed under the [Licença MIT](LICENSE).
 
 
    
