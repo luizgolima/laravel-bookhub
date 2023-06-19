@@ -1,16 +1,12 @@
 # Bookhub
 
-O Bookhub é um projeto Laravel que oferece uma plataforma para gerenciar uma biblioteca de livros. Ele utiliza o Laravel
-Sail para configurar e executar o ambiente de desenvolvimento local com Docker. O sistema de templates Blade é utilizado
-para renderização de páginas e o banco de dados MySQL para armazenar os dados.
+Bookhub is a Laravel project that provides a platform for managing a book library. It uses Laravel Sail to configure and run the local development environment with Docker. The Blade template system is used for page rendering, and the MySQL database is used to store the data.
 
-## Visão geral do projeto
+## Project Overview
 
-O Bookhub é uma aplicação web que permite aos usuários gerenciar uma biblioteca de livros. Ele oferece funcionalidades
-para criar, ler, atualizar e excluir usuários da biblioteca, bem como para gerenciar o acervo de livros. Além disso, é
-possível classificar os livros por gênero e realizar empréstimos aos usuários da biblioteca.
+Bookhub is a web application that allows users to manage a book library. It offers functionalities to create, read, update, and delete library users, as well as manage the book collection. Additionally, users of the library can classify books by genre and borrow them.
 
-## Tecnologias utilizadas
+## Technologies Used
 
 - PHP
 - Laravel
@@ -18,37 +14,35 @@ possível classificar os livros por gênero e realizar empréstimos aos usuário
 - Docker
 - Composer
 
-## Requisitos
+## Requirements
 
-Antes de começar, certifique-se de ter os seguintes requisitos instalados em seu ambiente de desenvolvimento:
+Before getting started, make sure you have the following requirements installed in your development environment:
 
 - PHP >= 8.0
 - Composer
 - Docker
 
-## Instalação
+## Installation
 
-1. Clone o repositório do projeto:
+1. Clone the project repository:
 
 ```bash
 git clone https://github.com/luizgolima/bookhub.git
 ```
 
-2. Navegue até o diretório do projeto:
+2. Navigate to the project directory:
 
 ```bash
 cd bookhub
 ```
 
-3. Copie o arquivo de ambiente de exemplo e configure as variáveis de ambiente:
+3. Copy the example environment file and configure the environment variables:
 
 ```bash
 cp .env.example .env
 ```
 
-4. Abra o arquivo .env e configure as informações de conexão com o banco de dados. Certifique-se de que as configurações
-   de host, porta, nome do banco de dados, nome de usuário e senha estão corretas para a instalação do MySQL. Por
-   exemplo:
+4. Open the .env file and configure the database connection information. Make sure the host, port, database name, username, and password settings are correct for your MySQL installation. For example:
 
 ```bash
 DB_CONNECTION=mysql
@@ -59,23 +53,23 @@ DB_USERNAME=usuario_do_banco_de_dados
 DB_PASSWORD=senha_do_banco_de_dados
 ```
 
-5. Inicie os contêineres Docker usando o Laravel Sail:
+5. Start the Docker containers using Laravel Sail:
 
 ```bash
 ./vendor/bin/sail up -d
 ```
 
-6. Execute as migrações do banco de dados para criar as tabelas necessárias:
+6. Run the database migrations to create the necessary tables:
 
 ```bash
 ./vendor/bin/sail artisan migrate
 ```
 
-7. O projeto está pronto para ser executado. Acesse-o no seu navegador em http://localhost.
+7. The project is ready to be executed. Access it in your browser at `http://localhost`.
 
-## Licença
+## License
 
-Este projeto é licenciado sob a [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 
    
